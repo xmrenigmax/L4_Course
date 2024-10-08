@@ -11,7 +11,7 @@ def ask_question(question):
     answer = input(question + " ")
     print(random.choice(responses))
     print()  # print a blank line
-
+    
 # Function to randomly ask 2 questions and provide random responses
 def random_question():
     print("I'll ask you 2 random questions: ")
