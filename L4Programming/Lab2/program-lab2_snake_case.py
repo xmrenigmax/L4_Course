@@ -40,6 +40,10 @@ def string_exercise():
     my_text = my_text.split()
     print(my_text)
 
+    # count string - count the number of times a string appears in a string
+    my_text = my_text.count('a')
+    print(my_text)
+
     
 def storage_space():
     snake_case()

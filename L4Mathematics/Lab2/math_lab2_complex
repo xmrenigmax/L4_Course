@@ -1,0 +1,16 @@
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+
+# Define the complex number
+z = 1 +2j
+# Print the real and imaginary parts
+# z.real displays the real part of the complex number
+# z.imag displays the imaginary part of the complex number
+# ro is the color red and the marker is a circle
+plt.plot(z.real, z.imag, "ro",markersize=12)
+plt.xlabel("Real")
+plt.ylabel("Imaginary")
+
+plt.text(z.real, (z.imag+0.1*z.imag),"z")
