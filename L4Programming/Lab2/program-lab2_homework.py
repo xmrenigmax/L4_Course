@@ -17,7 +17,7 @@ def pyramid_loop():
     for i in range(1, rows + 1):
         # i = the row number,, rows + 1 = the amount of rows the user wants
         print((str(i) + " ") * i)
-
+pyramid_loop()
 
 def first_digit():
     # takes integer from user, returns the first number of number
@@ -28,7 +28,8 @@ def first_digit():
     # Find the first digit
     first_digit = str(number)[0]
     print("The first digit is:", first_digit)
-        
+
+first_digit()
 
 
 def selection_sort():
