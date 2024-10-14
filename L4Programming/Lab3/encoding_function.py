@@ -1,24 +1,5 @@
 def encoding_function(message_in_number):
     """
-    This function encodes a sequence of numbers into a corresponding message by mapping each number to a specific letter.
-
-    The function works in two main parts:
-    
-    1. **Part A (User-defined input)**:
-       - The user creates a list of numbers (`num_list`) and a corresponding list of alphabets (`alphabet_list`).
-       - The function then creates a dictionary (`my_dict`) that maps each number to its corresponding letter.
-
-    0 --> A
-    1 --> B
-    2 --> C
-    3 --> D
-    ...
-    9 --> J
-    """
-    num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    alphabet_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
-    my_dict = dict(zip(num_list, alphabet_list))
-    """
     2. **Part B (Encoding the message)**:
        - The function takes a string of numbers (e.g., "2 0 5 4"), splits it into individual numbers, and converts each number into its corresponding letter using the dictionary created in Part A.
        - If a number is not found in the dictionary, the function prints an error message.
@@ -47,15 +28,9 @@ def encoding_function(message_in_number):
     """
     '''************************************************PART A************************************************************************'''
     # Complete the function implementation in Part A only.
-    # 1. Create your list of numbers here from 1 to 10 and assign it to num_list (line below)
-    # num_list = ...
-
-    # 2. Create your list of alphabets here from A to J and assign it to alphabet_list (line below)
-    # alphabet_list = ...
-
-
-    # 3. Create a dictionary that maps numbers to letters using dict(zip(num_list, alphabet_list)) and assign it to my_dict (line below)
-    # my_dict = ...
+    num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    alphabet_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    my_dict = dict(zip(num_list, alphabet_list))
 
     '''************************************************PART B************************************************************************'''
     numbers = message_in_number.split()

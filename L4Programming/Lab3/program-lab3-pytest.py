@@ -1,4 +1,4 @@
-import pytest
+import pytest  # pytest install ==> pip install pytest
 from encoding_function import *
 from remove_duplicates import *
 from reverse_list import *
@@ -36,3 +36,8 @@ def test_reverse_list():
 
 # Uncomment the below line if you want to run pytest from the script directly
 pytest.main()
+
+# Run the script using the following command:
+# python program-lab3-pytest.py
+# You should see the test results in
+# the output. If all tests pass, you should see an output similar to the following:
