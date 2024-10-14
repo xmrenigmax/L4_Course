@@ -14,6 +14,11 @@ def encoding_function(message_in_number):
     3 --> D
     ...
     9 --> J
+    """
+    num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    alphabet_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    my_dict = dict(zip(num_list, alphabet_list))
+    """
     2. **Part B (Encoding the message)**:
        - The function takes a string of numbers (e.g., "2 0 5 4"), splits it into individual numbers, and converts each number into its corresponding letter using the dictionary created in Part A.
        - If a number is not found in the dictionary, the function prints an error message.
@@ -66,4 +71,4 @@ def encoding_function(message_in_number):
 
     return result
 # # Example usage:
-# encoding_function("2 0 5 4")  # Uncomment to test the function
+encoding_function("2 0 5 4")  # Uncomment to test the function

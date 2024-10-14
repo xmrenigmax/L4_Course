@@ -19,6 +19,7 @@ def remove_duplicates(numbers):
     # Hint: Convert the list to a set to remove duplicates, then convert it back to a list
     # List --> Set (remove duplicates) --> List (return the list)
     # Write your code here...
+    unique_numbers = list(set(numbers))
 
 
     return unique_numbers
