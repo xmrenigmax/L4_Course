@@ -46,4 +46,4 @@ def encoding_function(message_in_number):
 
     return result
 # # Example usage:
-encoding_function("2 0 5 4")  # Uncomment to test the function
+#encoding_function("2 0 5 4")  # Uncomment to test the function
