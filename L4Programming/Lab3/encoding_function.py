@@ -30,6 +30,7 @@ def encoding_function(message_in_number):
     # Complete the function implementation in Part A only.
     num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     alphabet_list = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    
     my_dict = dict(zip(num_list, alphabet_list))
 
     '''************************************************PART B************************************************************************'''
