@@ -23,6 +23,9 @@ print(maximum, "is the maximum")
 '''
 
 def calculator(num1, num2, operator):
+    # Inform the user of the available operations they can perform.
+    print("Available operations: +, -, /, *, %, >, >=, <, <=")
+
     # This function performs basic arithmetic and comparison operations on two numbers.
     # @Param num1 (int or float): The first number.
     # @Param num2 (int or float): The second number.
@@ -57,10 +60,11 @@ def calculator(num1, num2, operator):
     else:
         # If an invalid operator is provided, the function prints an error message and does not return a result.
         return "Invalid operator."
-
     return result
 
 # Example usage:
+## please use 2 numbers and an operator to perform an operation
+## operators: +, -, /, *, %, >, >=, <, <=
 '''
 print(calculator(10, 5, "+"))  # Output: 15
 print(calculator(10, 5, "-"))  # Output: 5
@@ -74,4 +78,39 @@ print(calculator(10, 5, "<=")) # Output: False
 print(calculator(10, 0, "/"))  # Output: cannot divide by zero
 print(calculator(10, 5, "x"))  # Output: invalid operator
 print(calculator("10", 5, "+")) # Output: invalid numbers
+'''
+
+def winning_numbers(user_numbers, winning_numbers):
+    # This function checks if the user's numbers match the predefined winning numbers.
+    # @Param user_numbers (list): A list of three integers representing the user's chosen numbers.
+    # @Param winning_numbers (list): A list of predetermined integers representing the winning numbers.
+    # @Return str: A string indicating the prize won: "First", "Second", "Third", "No".
+
+    # makes sure the lists are 3 numbers long
+    if len(user_numbers) != 3 or len(winning_numbers) != 3:
+        return "Invalid input. Please enter three numbers."
+
+    # Check how many numbers match the winning numbers
+    matches = sum(1 for num in user_numbers if num in winning_numbers)
+    
+    if matches == 3:
+        prize = "First"
+    elif matches == 2:
+        prize = "Second"
+    elif matches == 1:
+        prize = "Third"
+    else:
+        prize = "No"
+    
+    print(f"Congratulations, you won {prize} prize!")
+    return prize
+
+# Example usage:
+## please use 3 numbers in each list to find if you have won a prize
+'''
+print(winning_numbers([3, 5, 10], [5, 14, 17]))  # Output: Third
+print(winning_numbers([14, 5, 10], [5, 14, 17]))  # Output: Second
+print(winning_numbers([5, 14, 17], [5, 14, 17]))  # Output: First
+print(winning_numbers([1, 2, 3], [5, 14, 17]))  # Output: No
+print(winning_numbers([1, 2], [5, 14, 17]))  # Output: Invalid input. Please enter three numbers.
 '''
