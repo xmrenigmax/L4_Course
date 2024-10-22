@@ -11,11 +11,16 @@ def max_of_three(num1, num2, num3):
     # @Param num2 (int): The second number.
     # @Param num3 (int): The third number.
     # @Return int: The maximum of the three numbers.
+
+    # Initialize the maximum to the first number
     maximum = num1
+    # Compare the second and third numbers to the current maximum
     if num2 > maximum:
         maximum = num2
+    # Compare the third number to the current maximum
     if num3 > maximum:
         maximum = num3
+    # Return the maximum number
     return maximum
 '''
 maximum = max_of_three(10, 20, 30)
@@ -38,7 +43,8 @@ def calculator(num1, num2, operator):
     if operator == "/" and num2 == 0:
         # If the second number is 0 and the operator is division, the function prints an error message and does not return a result.
         return "Cannot divide by zero"
-
+    
+    # Perform the operation based on the operator provided
     if operator == "+":
         result = num1 + num2
     elif operator == "-":
@@ -91,26 +97,27 @@ def winning_numbers(user_numbers, winning_numbers):
         return "Invalid input. Please enter three numbers."
 
     # Check how many numbers match the winning numbers
-    matches = sum(1 for num in user_numbers if num in winning_numbers)
-    
-    if matches == 3:
+    # Check how many numbers match the winning numbers using set intersection
+    match_count = len(set(user_numbers) & set(winning_numbers))
+
+    # Determine the prize based on the number of matches
+    if match_count == 3:
         prize = "First"
-    elif matches == 2:
+    elif match_count == 2:
         prize = "Second"
-    elif matches == 1:
+    elif match_count == 1:
         prize = "Third"
     else:
         prize = "No"
-    
-    print(f"Congratulations, you won {prize} prize!")
+
+    # Return the prize won
     return prize
 
 # Example usage:
 ## please use 3 numbers in each list to find if you have won a prize
-'''
+
 print(winning_numbers([3, 5, 10], [5, 14, 17]))  # Output: Third
 print(winning_numbers([14, 5, 17], [5, 14, 6]))  # Output: Second
 print(winning_numbers([5, 14, 17], [5, 14, 17]))  # Output: First
 print(winning_numbers([1, 2, 3], [5, 14, 17]))  # Output: No
 print(winning_numbers([1, 2], [5, 14, 17]))  # Output: Invalid input. Please enter three numbers.
-'''
