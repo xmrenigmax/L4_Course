@@ -109,7 +109,7 @@ def winning_numbers(user_numbers, winning_numbers):
 ## please use 3 numbers in each list to find if you have won a prize
 '''
 print(winning_numbers([3, 5, 10], [5, 14, 17]))  # Output: Third
-print(winning_numbers([14, 5, 10], [5, 14, 17]))  # Output: Second
+print(winning_numbers([14, 5, 17], [5, 14, 6]))  # Output: Second
 print(winning_numbers([5, 14, 17], [5, 14, 17]))  # Output: First
 print(winning_numbers([1, 2, 3], [5, 14, 17]))  # Output: No
 print(winning_numbers([1, 2], [5, 14, 17]))  # Output: Invalid input. Please enter three numbers.
