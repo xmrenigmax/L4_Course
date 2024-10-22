@@ -96,8 +96,9 @@ def winning_numbers(user_numbers, winning_numbers):
     if len(user_numbers) != 3 or len(winning_numbers) != 3:
         return "Invalid input. Please enter three numbers."
 
-    # Check how many numbers match the winning numbers
     # Check how many numbers match the winning numbers using set intersection
+    # using sets because they are unordered and do not contain duplicates
+    ## set() creates a set from the list of numbers
     match_count = len(set(user_numbers) & set(winning_numbers))
 
     # Determine the prize based on the number of matches
@@ -109,15 +110,15 @@ def winning_numbers(user_numbers, winning_numbers):
         prize = "Third"
     else:
         prize = "No"
-
     # Return the prize won
     return prize
 
 # Example usage:
 ## please use 3 numbers in each list to find if you have won a prize
-
+'''
 print(winning_numbers([3, 5, 10], [5, 14, 17]))  # Output: Third
 print(winning_numbers([14, 5, 17], [5, 14, 6]))  # Output: Second
 print(winning_numbers([5, 14, 17], [5, 14, 17]))  # Output: First
 print(winning_numbers([1, 2, 3], [5, 14, 17]))  # Output: No
 print(winning_numbers([1, 2], [5, 14, 17]))  # Output: Invalid input. Please enter three numbers.
+'''
