@@ -13,23 +13,16 @@ def restock_inventory(available_items, inventory_records, current_day):
     available_items: (integer) This function returns this integer which updates the available items at the current day.
 
     The function will also update the inventory_records (For restocking) for a given current day. It will also return "available_items".
-    This function handles the restocking of inventory. On day 0 and every 7 days thereafter, it restocks the inventory to a maximum of 2000 units and updates inventory_records with the details.
+    This function handles the restocking of inventory. On day 0 and every 6 days thereafter, it restocks the inventory to a maximum of 2000 units and updates inventory_records with the details.
     This function takes records of previous days -as list -and updates the stocking record for a current day following the requirements.
     """
-    if current_day == 0 or current_day % 7 == 0:
+    if current_day == 0 or (current_day - 6) % 7 == 0:
         restocked_items = 2000 - available_items
         available_items = 2000
         sold_units = 0
-    else:
-        restocked_items = 0
-        sold_units = random.randint(0, 200)
-        available_items -= sold_units
 
     # Ensure available items do not exceed 2000 units
     available_items = min(available_items, 2000)
-
-    # Append the current day's record to inventory_records
-    inventory_records.append((current_day, sold_units, restocked_items, available_items))
     
     return available_items
     

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<moviestore>
+    <horrormovies>
+        <TheRing>
+            <title>The Ring</title>
+            <author>Koji Suzuki</author>
+            <price>25.99</price>
+        </TheRing>
+        <BoogeyMan>
+            <title>Boogeyman</title>
+            <author>Stephen King</author>
+            <price>15.99</price>
+        </BoogeyMan>
+    </horrormovies>
+    <actionmovies>
+        <DieHard>
+            <title>Die Hard</title>
+            <author>John McTiernan</author>
+            <price>7.99</price>
+        </DieHard>
+        <avengers>
+            <title>The avengers</title>
+            <author>Joss whedon</author>
+            <price>10.99</price>
+        </avengers>
+    </actionmovies>
+</moviestore>

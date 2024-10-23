@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<bookstore>
+    <book>
+        <title> Harry Potter and the Philosphers stone</title>
+        <author> J.K Rowling</author>
+        <price>10.99</price>
+    </book>
+    <!-- Add two more books-->
+    <book1>
+        <title> Harry Potter and the goblet of fire</title>
+        <author> J.K Rowling</author>
+        <price>10.99</price>
+    </book1>
+    <book2>
+        <title> Harry Potter and the chamber of secrets</title>
+        <author> J.K Rowling</author>
+        <price>10.99</price>
+    </book2>
+</bookstore>
