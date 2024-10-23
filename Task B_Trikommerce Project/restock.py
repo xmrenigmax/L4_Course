@@ -20,9 +20,15 @@ def restock_inventory(available_items, inventory_records, current_day):
         restocked_items = 2000 - available_items
         available_items = 2000
         sold_units = 0
+    else:
+        restocked_items = 0
+        
 
     # Ensure available items do not exceed 2000 units
     available_items = min(available_items, 2000)
+
+    # updates inventory records with the details of restock_inventory
+    inventory_records.append((current_day, sold_units, restocked_items, available_items))
     
     return available_items
     
