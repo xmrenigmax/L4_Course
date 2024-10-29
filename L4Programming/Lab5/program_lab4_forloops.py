@@ -33,7 +33,9 @@ def divisible_by_13():
 def even_not_three():
     sum = 0
     for number in range(0, 101):
-        if number % 2 == 0 and number % 3 != 0:
+        if number % 3 == 0:
+            continue
+        if number % 2 == 0:
             sum += number
     print(sum)
 even_not_three()
