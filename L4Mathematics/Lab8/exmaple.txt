@@ -1,0 +1,45 @@
+# Example
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define vectors v and w
+v = np.array([1, 2])  # Vector v
+w = np.array([2, 1])  # Vector w
+
+# Calculate d = w - v
+d = w - v
+
+# Plot the vectors
+plt.figure(figsize=(6, 6))
+
+# Plot vector v using quiver
+plt.quiver(0, 0, v[0], v[1], 
+           angles='xy',           # Ensure the arrow angles align with the xy coordinate system
+           scale_units='xy',      # Set the scale of the arrow to match the data units
+           scale=1,               # Keep the arrow length proportional to the vector magnitude
+           color='blue', label='v')
+
+# Plot vector w using quiver
+plt.quiver(0, 0, w[0], w[1], angles='xy',  scale_units='xy', scale=1, color='green', label='w')
+
+# Plot vector d = w - v using quiver
+plt.quiver(v[0], v[1], d[0], d[1], angles='xy', scale_units='xy', scale=1, color='red', label='d = w - v')
+
+# Add legend for the vectors
+plt.legend(['v', 'w', 'd = w - v'])
+
+# Set the axis limits and ensure equal scaling
+plt.xlim(-1, 3)
+plt.ylim(-1, 3)
+plt.grid()
+
+# Add titles and labels
+plt.title('Vector Directions')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Display the plot
+plt.show()
+print(np.sqrt(d@d))
+
+
