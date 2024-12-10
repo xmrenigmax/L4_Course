@@ -52,8 +52,6 @@ def divisible_by():
     assert divisible_by_2_3_5(0) == []
 
 ' Exercise 2'
-
-
 def test_fix_code():
     assert fix_code(2022) == "That's the past!"
     assert fix_code(2024) == "That's the present!"
