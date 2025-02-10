@@ -36,5 +36,3 @@ SELECT * FROM CITY;
 
 SELECT table_name FROM user_tables;
 
--- new 
-SELECT NAME FROM CITY WHERE MOD(2,0) = 0;
