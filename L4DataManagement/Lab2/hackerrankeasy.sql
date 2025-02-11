@@ -13,6 +13,28 @@ CREATE TABLE STATION
     LONG_W NUMBER
 );
 
+CREATE TABLE TRIANGLES
+(
+    A NUMBER,
+    B NUMBER,
+    C NUMBER
+);
+
+CREATE TABLE STATION
+(
+    ID NUMBER,
+    CITY VARCHAR2(21),
+    STATE VARCHAR2(2),
+    LAT_N NUMBER,
+    LONG_W NUMBER
+);
+
+CREATE TABLE OCCUPATIONS
+(
+    NAME VARCHAR2(21),
+    OCCUPATION VARCHAR2(21)
+);
+
 -- gets the city with the shortest name
 -- does this by getting the city with the smallest length and then getting the city with the smallest name
 select * from(select city,length(city) from station order by length(city) asc,city asc) where rownum=1 union
@@ -62,3 +84,8 @@ SELECT CASE WHEN A + B <= C OR B + C <= A OR A + C <= B THEN 'Not A Triangle'
             WHEN A! = B AND B! = C AND A! = C THEN 'Scalene'
             END
 FROM TRIANGLES;
+
+
+DROP TABLE OCCUPATIONS;
+DROP TABLE TRIANGLES;
+DROP TABLE STATION;
