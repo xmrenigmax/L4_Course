@@ -93,7 +93,7 @@ CREATE TABLE musician_artist_lnk
 (
 fk_musician_id VARCHAR2(10),
 fk_artist_id VARCHAR2(10),
-musician_joined DATE, 			--it's Ollie's fault
+musician_joined DATE, 			
 musician_left DATE,
 PRIMARY KEY (fk_musician_id,fk_artist_id,musician_joined),
 FOREIGN KEY (fk_musician_id) REFERENCES musician_tbl(musician_id),
@@ -110,3 +110,9 @@ FOREIGN KEY (fk_song_id) REFERENCES song_tbl(song_id)
 );
 
 commit;
+
+-- cleanup
+
+
+
+
